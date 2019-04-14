@@ -26,6 +26,17 @@ app.get("/json", (req, res, next) => {
 	}
 });
 
+app.get(
+	"/now",
+	(req, res, next) => {
+		req.time = new Date().toString();
+		next();
+	},
+	(req, res, next) => {
+		res.json({ time: req.time });
+	},
+);
+
 /** 8) Chaining middleware. A Time server */
 
 /** 9)  Get input from client - Route parameters */
