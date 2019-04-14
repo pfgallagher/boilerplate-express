@@ -52,7 +52,7 @@ app.get("/name", (req, res, next) => {
 
 app.post("/name", (req, res, next) => {
 	res.json({
-		name: `${req.query.first} ${req.query.last}`,
+		name: `${req.body.first} ${req.body.last}`,
 	});
 });
 
