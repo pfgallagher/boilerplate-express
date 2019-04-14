@@ -37,9 +37,11 @@ app.get(
 	},
 );
 
-/** 8) Chaining middleware. A Time server */
-
-/** 9)  Get input from client - Route parameters */
+app.get("/:word/echo", (req, res, next) => {
+	res.json({
+		echo: req.params.word,
+	});
+});
 
 /** 10) Get input from client - Query parameters */
 // /name?first=<firstname>&last=<lastname>
