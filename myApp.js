@@ -1,18 +1,18 @@
 const express = require("express");
 const app = express();
+const path = require("path");
 
 // --> 7)  Mount the Logger middleware here
 
 // --> 11)  Mount the body-parser middleware  here
 
-/** 1) Meet the node console. */
 console.log("Hello World");
 
-/** 2) A first working Express Server */
+app.use(express.static(path.join(__dirname, "./views")));
+
 app.get("/", (req, res, next) => {
 	res.send("Hello Express");
 });
-/** 3) Serve an HTML file */
 
 /** 4) Serve static assets  */
 
