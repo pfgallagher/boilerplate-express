@@ -50,11 +50,11 @@ app.get("/name", (req, res, next) => {
 	});
 });
 
-/** 12) Get data form POST  */
-
-// This would be part of the basic setup of an Express app
-// but to allow FCC to run tests, the server is already active
-/** app.listen(process.env.PORT || 3000 ); */
+app.post("/name", (req, res, next) => {
+	res.json({
+		name: `${req.query.first} ${req.query.last}`,
+	});
+});
 
 //---------- DO NOT EDIT BELOW THIS LINE --------------------
 
