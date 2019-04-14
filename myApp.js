@@ -15,9 +15,9 @@ app.get("/", (req, res, next) => {
 	res.send("Hello Express");
 });
 
-/** 4) Serve static assets  */
-
-/** 5) serve JSON on a specific route */
+app.get("/json", (req, res, next) => {
+	res.json({ message: "Hello json" });
+});
 
 /** 6) Use the .env file to configure the app */
 
